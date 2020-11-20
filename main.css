@@ -1,0 +1,39 @@
+*{
+	box-sizing: border-box;
+}
+body{
+background-color:#ff0e45;
+
+}
+
+#calculator{
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	flex-flow: wrap;
+
+}
+
+#screen{
+	width:21.5%;
+	height: 100px;
+	    margin: 0 auto;
+	    display: block;
+	font-size: 5rem;
+	padding:5px;
+
+}
+button{
+	flex-flow: row;
+	width: 130px;
+	height: 110px;
+	line-height: 10px;
+	margin: 7px;
+}
+.btn{
+	font-size: 3.5rem;
+}
+#buttons{
+	width: 590px;
+	height: 490px;
+}
