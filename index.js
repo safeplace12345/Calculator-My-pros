@@ -4,39 +4,21 @@ const warningBtn = document.querySelectorAll('.btn-warning')
 const equalBtn = document.getElementById('equalbtn');
 const clearBtn = document.getElementById('clearbtn');
 
-console.log(grayBtn)
-if(screen.value === null){
-    screen.value += 0;
-}else{
+// console.log(grayBtn)
 
-function displayValue(e){
+const displayValue = (e) => {
+    // Add another function if the value has a digit after a non word char
+if(screen.value.match(/[+]\d$/)){
+            evaluation()
+    } 
     screen.value += e.value;
 }
-function clearScr(){
-    screen.value = '0';
+const clearScr = () => {
+    screen.value = '';
 }
-function evaluation(){
-    screen.value = eval(screen.value)
+const evaluation = () => {
+    screen.value = eval(screen.value).toFixed(2)
     
 }
-}
-
-// console.log(button6)
 
 
-// displayValues(grayBtn, showValue());
-
-// for(var i = 0 ;i < btn.length; i++){
-//     let number = btn[i].getAttribute('data-num')
-//     btn[i].addEventListener('click',function(){
-//     screen.value += number;
-// })}
-
-// // equalbtn.addEventListener('click',function(){
-// //     let value = eval(screen.value)
-// //     screen.value = value;
-// // })
-// clearBtn.addEventListener('click',function(){
-//     screen.value += '';
-// })
-// console.log(equalBtn)
